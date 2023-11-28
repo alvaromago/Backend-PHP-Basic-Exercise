@@ -39,9 +39,9 @@
                 <input type="date" name="fechaNacimiento" value="<?php echo $nino['fechaNacimientoNino']; ?>" class="my-2" required><br>
 
                 <label for="bueno">Bueno: </label>
-                <input type="radio" name="bueno" value="Sí" <?php echo ($nino['buenoNino'] == 'Sí') ? 'checked' : ''; ?> required class="my-2">
+                <input type="radio" name="bueno" value="Sí" <?php echo ($nino['buenoNino'] == 'Sí'); ?> required class="my-2">
                 <label>Sí</label>
-                <input type="radio" name="bueno" value="No" <?php echo ($nino['buenoNino'] == 'No') ? 'checked' : ''; ?> required class="my-2">
+                <input type="radio" name="bueno" value="No" <?php echo ($nino['buenoNino'] == 'No'); ?> required class="my-2">
                 <label>No</label><br>
 
                 <input type="submit" value="Actualizar Niño" class="btn btn-success">
@@ -55,7 +55,11 @@
                 $nombre = $conexion->real_escape_string($_POST['nombre']);
                 $apellidos = $conexion->real_escape_string($_POST['apellidos']);
                 $fechaNacimiento = $conexion->real_escape_string($_POST['fechaNacimiento']);
-                $bueno = $conexion->real_escape_string($_POST['bueno']);
+                if ($conexion->real_escape_string($_POST['bueno'] == "Sí")) {
+                    $bueno = 1;
+                } else {
+                    $bueno = 0;
+                }
 
                 // Query para actualizar los datos del niño
                 $sql_update = "update ninos set 
