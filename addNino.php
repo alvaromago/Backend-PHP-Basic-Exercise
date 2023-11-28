@@ -39,10 +39,10 @@
     ?>
     <form action="addNino.php" method="post">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" class="my-2" required><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Luis" class="my-2" required><br>
 
         <label for="apellidos">Apellidos:</label>
-        <input type="text" id="apellidos" name="apellidos" class="my-2" required><br>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Gaitán" class="my-2" required><br>
 
         <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="my-2" required><br>
