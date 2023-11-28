@@ -29,7 +29,7 @@
         echo "<h4>ID de niño no proporcionado.</h4>";
     }
     ?>
-    <a href="ninos.php" class="btn btn-danger">Volver atrás</a>
+    <a href="ninos.php" class="btn btn-danger">Volver al menú</a>
 </body>
 
 </html>

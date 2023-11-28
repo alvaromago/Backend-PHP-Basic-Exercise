@@ -35,6 +35,13 @@
                 <label for="precio">Precio: </label>
                 <input type="text" name="precio" value="<?php echo $juguete['precioJuguete'] ?>" class="my-2" required>€<br>
 
+                <label for="idReyFK">Rey Mago:</label>
+                <select id="idReyFK" name="idReyFK" required>
+                    <option value="1">Melchor</option>
+                    <option value="2">Gaspar</option>
+                    <option value="3">Baltasar</option>
+                </select><br>
+
                 <input type="submit" value="Actualizar Juguete" class="btn btn-success">
                 <a href="regalos.php" class="my-3 btn btn-danger">Cancelar</a>
             </form>
@@ -45,11 +52,13 @@
                 $idJuguete = $conexion->real_escape_string($_POST['idJuguete']);
                 $nombre = $conexion->real_escape_string($_POST['nombre']);
                 $precio = $conexion->real_escape_string($_POST['precio']);
+                $idReyFK = $conexion->real_escape_string($_POST['idReyFK']);
 
                 // Query para actualizar los datos del niño
                 $sql_update = "update juguetes set 
                             nombreJuguete = '$nombre',
-                            precioJuguete = '$precio'
+                            precioJuguete = '$precio',
+                            idReyFK = '$idReyFK'
                             where idJuguete = $idJuguete";
 
                 if ($conexion->query($sql_update) === TRUE) {

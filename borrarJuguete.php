@@ -29,7 +29,7 @@
         echo "<h4>ID del juguete no proporcionado.</h4>";
     }
     ?>
-    <a href="regalos.php" class="btn btn-danger">Volver atrás</a>
+    <a href="regalos.php" class="btn btn-danger">Volver al menú</a>
 </body>
 
 </html>

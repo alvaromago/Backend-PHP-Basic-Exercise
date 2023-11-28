@@ -23,7 +23,7 @@
         {
             $conexion = Conexion::conectar();
 
-            $sql = "select * from juguetes order by idJuguete";
+            $sql = "select * from juguetes inner join reyesmagos on idReyFK = idRey order by idJuguete";
             $resultados = $conexion->query($sql);
 
             // Verificar si hay resultados
@@ -35,6 +35,7 @@
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Precio</th>
+                            <th>Rey Mago</th>
                             <th>Editar / Borrar</th>
                         </tr>
                         <?php
@@ -45,6 +46,7 @@
                                 <td><?php echo $fila['idJuguete'] ?></td>
                                 <td><?php echo $fila['nombreJuguete'] ?></td>
                                 <td><?php echo $fila['precioJuguete'] . "€" ?></td>
+                                <td><?php echo $fila['nombreRey'] ?></td>
                                 <td>
                                     <a href="editarJuguete.php?id=<?php echo $fila['idJuguete'] ?>" class="btn btn-warning">Editar</a>
                                     <a href="borrarJuguete.php?id=<?php echo $fila['idJuguete'] ?>" class="btn btn-danger">Borrar</a>
