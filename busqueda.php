@@ -160,7 +160,11 @@ $busqueda = new Busqueda($conexion);
         }
         ?>
     </div>
-
+    <footer class="py-5">
+        <a href="ninos.php" class="btn btn-primary">Niños</a>
+        <a href="regalos.php" class="btn btn-primary">Juguetes</a>
+        <a href="reyes.php" class="btn btn-primary">Reyes</a>
+    </footer>
 </body>
 
 </html>

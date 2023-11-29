@@ -75,6 +75,11 @@
     $ninos = new Ninos();
     $ninos->obtenerNinos();
     ?>
+    <footer class="py-5">
+        <a href="busqueda.php" class="btn btn-primary">Búsqueda</a>
+        <a href="regalos.php" class="btn btn-primary">Juguetes</a>
+        <a href="reyes.php" class="btn btn-primary">Reyes</a>
+    </footer>
 </body>
 
 </html>

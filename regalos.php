@@ -69,6 +69,11 @@
     $juguetes = new Juguetes();
     $juguetes->obtenerJuguetes();
     ?>
+    <footer class="py-5">
+        <a href="ninos.php" class="btn btn-primary">Niños</a>
+        <a href="busqueda.php" class="btn btn-primary">Búsqueda</a>
+        <a href="reyes.php" class="btn btn-primary">Reyes</a>
+    </footer>
 </body>
 
 </html>
